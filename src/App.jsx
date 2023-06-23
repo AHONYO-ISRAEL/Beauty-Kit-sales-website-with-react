@@ -1,7 +1,4 @@
-import Header from './components/header/Header'
 import './App.css'
-import FirstContainer from './components/firstcontainer/FirstContainer'
-import SecondContainer from './components/secondcontainer/SecondContainer'
 import { useState } from 'react'
 import Home from './components/pages/Home'
 

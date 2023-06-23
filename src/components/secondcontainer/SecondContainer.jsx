@@ -1,5 +1,6 @@
 import Products from "./products/Products"
 import './SecondContainer.css'
+import PropTypes from 'prop-types';
 
 const SecondContainer = ({products}) => {
   return (
@@ -11,6 +12,10 @@ const SecondContainer = ({products}) => {
         <Products product={products}/>
     </div>
   )
+}
+
+SecondContainer.propTypes = {
+    products:PropTypes.array,
 }
 
 export default SecondContainer
