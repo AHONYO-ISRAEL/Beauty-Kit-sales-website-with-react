@@ -1,0 +1,48 @@
+.Aproduct{
+    position: relative;
+    margin: 10px  10px 10px 10px;
+      width: 15vw;
+      box-shadow:0px  0px  10px #3c3737  ;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      text-align: center;
+      justify-content: flex-end;
+      margin-top: 50px;
+      padding: 30px;
+      min-height: 380px;
+      max-height: 400px;
+      min-width: 200px;
+      transition: 0.8s;
+    }
+    
+    
+    .Aproduct img{
+      height: 50%;
+      width: 80%;
+      margin-bottom: 20px;
+    }
+    
+    .purchase{
+      display: flex;
+      bottom: 0;
+      position: absolute;
+      background: black;
+      justify-content: space-around;
+      width: 100%;
+      margin-left: -30px;
+      align-items: center;
+      align-content: center;
+    }
+    
+    .purchase button{
+      border-radius: 30px;
+      height: 30px;
+    }
+    
+
+    .purchase p{
+      color: white;
+    }
+    
+    

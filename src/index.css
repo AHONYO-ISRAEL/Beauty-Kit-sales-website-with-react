@@ -1,0 +1,146 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+
+
+
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #e742c1;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+/* =================================================================RESPONSIVE- =================================================================*/
+@media screen and (max-width:992px) {
+
+  body{
+      overflow-x: hidden;
+  }
+  .Products{
+      width: 90%;
+      justify-content: space-around;
+      align-items: center;
+      align-content: center;
+  padding: 0;
+  margin-left: 30px;
+  }
+
+  .Aproduct{
+      width: 50%;
+      margin: 20px  5px  10px  0px ;
+  }
+
+
+}
+
+
+
+@media screen  and  (max-width:768px){
+  .kit-img{
+      display: none;
+
+  }
+  .beauty-kit{
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+  }
+
+  .burger{
+    top: 0;
+    left: 0;
+  }
+
+
+  .FirstContainer .desc{
+      align-items: center;
+      text-align: center;
+  }
+
+
+  .beauty-kit h1{
+  font-size: 70px;
+  font-family:"Great Vibes";
+  margin-top: 90px;
+
+  }
+.FirstContainer{
+  background-size: cover;
+  padding: 0;
+}
+
+.Aproduct{
+  min-width: 70%;
+  min-height: 70vh;
+}
+
+.Products{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+
+.logo{
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.Header{
+justify-content: center;
+align-content: center;
+align-items: center;
+width: 100vw;
+}
+.icons{
+  display: none;
+}
+
+
+nav {
+  display: flex;
+  z-index: 3;
+}
+
+.burger{
+  transform: translateY(0);
+}
+
+nav img{
+  width: 40px;
+}
+
+}

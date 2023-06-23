@@ -1,0 +1,9 @@
+.Products{
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 75vw;
+  margin-left: 10vw;
+  }
