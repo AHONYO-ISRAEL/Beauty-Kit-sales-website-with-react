@@ -1,6 +1,9 @@
 import './App.css'
 import { useState } from 'react'
 import Home from './components/pages/Home'
+import { BrowserRouter as Router , Route, Routes} from 'react-router-dom';
+import BuyPage from './components/pages/BuyPage';
+
 
 
 function App() {
@@ -74,7 +77,22 @@ function App() {
   ]);
   return (
     <div>
-      <Home Product={Product}/>
+      <Router> 
+      <Routes> 
+
+
+
+<Route   path='/' 
+element ={
+  <>
+            <Home Product={Product}/>
+  </>
+}
+/>
+<Route path='/cart'  Component={BuyPage} /> 
+ </Routes> 
+
+      </Router> 
     </div>
   )
 }

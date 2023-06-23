@@ -1,5 +1,5 @@
 import './FirstContainer.css'
-import beautykitimg from './../../../public/images/beauty-kit-img.png'
+import beautykitimg from '/images/beauty-kit-img.png'
 
 const FirstContainer = () => {
   return (

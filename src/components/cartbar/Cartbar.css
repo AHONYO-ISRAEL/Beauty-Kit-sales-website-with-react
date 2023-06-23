@@ -1,0 +1,29 @@
+.Cartbar{
+    width: 80%;
+    box-shadow: 0px  2px 20px gray;
+  padding: 10px;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  margin-left: 10%;
+  display: flex;
+  position: fixed;
+  background: white;
+  margin-bottom: 40px;
+  z-index: 99;
+  margin-top: 70px;
+  }
+  
+  .Cartbar button{
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+  }
+  .Cartbar button:nth-child(1){
+    background: #020202;
+    color: white;
+  }
+  
+  .Cartbar button:nth-child(2){
+    background: #e640bf;
+  }
