@@ -1,7 +1,8 @@
+import { CartContext } from '../../CartProvider';
 import './Products.css'
 import Aproduct from './aproduct/Aproduct'
 import PropTypes from 'prop-types';
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 
 
 const Products = () => {
@@ -73,9 +74,8 @@ const Products = () => {
     }
 
   ]);
-
   const [cart, setCart] = useState([])
-
+const {setCartIndex} = useContext(CartContext)
 let add =  (id) =>{
 
 let SearchProduct= productlist.find(product =>product.id === parseInt(id))
@@ -95,6 +95,9 @@ if(SearchCart === undefined){
 }
 SearchProduct.tocart= true,
 console.log(cart)
+localStorage.setItem('cart', JSON.stringify(cart))
+setCartIndex(cart.length)
+//cartindex.innerHTML=cart.length
 }
   return (
     <div className='Products'>

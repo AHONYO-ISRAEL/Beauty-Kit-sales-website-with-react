@@ -5,7 +5,11 @@ import bars from  '/fontawesome-free-6.4.0-web/svgs/solid/bars-staggered.svg'
 
 
 import './Header.css'
+import { useContext } from 'react'
+import { CartContext } from '../CartProvider'
 const Header = () => {
+  //const cart = JSON.parse(localStorage.getItem('cart'))
+  const {cartIndex} = useContext(CartContext)
   return (
     <div className='Header'>
     <div className="hamburger icon " >
@@ -21,7 +25,7 @@ const Header = () => {
   <img src= {cartplus} className="icon icart"   alt=""  />
 
   </a>
-  <p className="cart-index1">0 </p>
+  <p className="cart-index1"> {cartIndex} </p>
 
  </div>
 <img  className="icon" alt="" src={glass} />
