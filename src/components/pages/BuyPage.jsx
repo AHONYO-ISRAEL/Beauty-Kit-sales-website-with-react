@@ -1,5 +1,5 @@
 import Cartbar from "../cartbar/Cartbar"
-// import CartProducts from "../cartproducts/CartProducts"
+ import CartProducts from "../cartproducts/CartProducts"
 import Header from "../header/Header"
 
 const BuyPage = () => {
@@ -7,9 +7,10 @@ const BuyPage = () => {
     <>
 <Header/>
 <Cartbar/>
-{/* <CartProducts/> */}
+<CartProducts /> 
     </>
   )
 }
+
 
 export default BuyPage

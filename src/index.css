@@ -34,10 +34,10 @@ button {
 button:hover {
   border-color: #e742c1;
 }
-button:focus,
+/* button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 
 /* =================================================================RESPONSIVE- =================================================================*/

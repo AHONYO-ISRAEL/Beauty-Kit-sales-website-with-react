@@ -14,7 +14,7 @@ const CartProduct = ({cartproduct}) => {
 <div className = "quantity">
 
 <button className = "remove" >-</button>
-<h1 id= {cartproduct.id}className = "qty">${cartproduct.quantity}</h1>
+<h1 id= {cartproduct.id}className = "qty">{cartproduct.quantity}</h1>
 <button className = "add" >+</button>
 
 </div>

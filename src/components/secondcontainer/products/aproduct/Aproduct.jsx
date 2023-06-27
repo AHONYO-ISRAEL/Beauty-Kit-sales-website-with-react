@@ -1,17 +1,25 @@
+import Button from '../../../Button';
 import './Aproduct.css'
+import { useState } from 'react';
 import PropTypes from 'prop-types';
-const Aproduct = ({Product}) => {
+const Aproduct = ({Product, add}) => {
 
-    let add = (id) =>{
-        console.log(id);
-    }
+const [message1,setMessage1] = useState('Add to Cart')
+const [message2] = useState('Buy Now')
+
+let HandleFirstButtonClick = (e) =>{
+  setMessage1('Product Added');
+  add(e.target.value)
+}
+
+
   return (
 <div className="Aproduct" id={Product.id}>
 <h1>{Product.title}</h1>
       <img src={Product.image} alt='' />
       <div className="purchase">
-        <button type="button" >Add to Cart</button>
-        <button type="button" className="but"  onClick={add(Product.id)}  value={Product.id}  >Buy Now</button>
+        <Button  onButtonClick={HandleFirstButtonClick}   message={message1}  value={Product.id} />
+          <Button  message={message2}/>
         <p>${Product.price}$</p>
       </div>
 </div>
@@ -19,7 +27,8 @@ const Aproduct = ({Product}) => {
 }
 
 Aproduct.propTypes  =  {
-    Product: PropTypes.array,
+    Product: PropTypes.object,
+    add:PropTypes.func,
 }
 
 

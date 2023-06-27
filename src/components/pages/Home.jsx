@@ -3,18 +3,18 @@ import FirstContainer from "../firstcontainer/FirstContainer"
 import SecondContainer from "../secondcontainer/SecondContainer"
 import PropTypes from 'prop-types';
 
-const Home = ({Product}) => {
+const Home = () => {
   return (
     <>
         <Header />
 <FirstContainer/>
-<SecondContainer  products={Product} />
+<SecondContainer />
     </>
   )
 }
 
 Home.propTypes={
-    Product : PropTypes.array,
+    add:PropTypes.func,
 }
 
 

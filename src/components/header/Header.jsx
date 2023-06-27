@@ -2,6 +2,8 @@ import  cartplus from  '/fontawesome-free-6.4.0-web/svgs/solid/cart-plus.svg'
 import user from  '/fontawesome-free-6.4.0-web/svgs/regular/user.svg'
 import glass from  '/fontawesome-free-6.4.0-web/svgs/solid/magnifying-glass.svg'
 import bars from  '/fontawesome-free-6.4.0-web/svgs/solid/bars-staggered.svg'
+
+
 import './Header.css'
 const Header = () => {
   return (
