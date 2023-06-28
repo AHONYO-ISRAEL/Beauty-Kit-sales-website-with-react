@@ -48,6 +48,6 @@
     border-radius: 20px;
     background-color: #7fffd4b2;
     position: absolute;
-  
+  display: block;
     text-align: center;
   }

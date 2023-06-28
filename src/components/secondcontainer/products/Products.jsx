@@ -1,3 +1,4 @@
+import { CartProductContext } from '../../CartProductProvider';
 import { CartContext } from '../../CartProvider';
 import './Products.css'
 import Aproduct from './aproduct/Aproduct'
@@ -6,6 +7,7 @@ import { useContext, useState } from 'react'
 
 
 const Products = () => {
+  const [toCart, setToCart] = useState(false)
   const  [productlist] = useState([
 
     {
@@ -14,7 +16,7 @@ const Products = () => {
       description: "Lorem ipsum shits and stuff",
       image: "./images/im8.png",
       price: 7.5,
-      tocart: false
+      tocart: toCart
     },
     {
       id: 2,
@@ -22,7 +24,7 @@ const Products = () => {
       description: "Lorem ipsum dolor sit amet",
       image: "./images/im7.png",
       price: 9.99,
-      tocart: false
+      tocart: toCart
     },
     {
       id: 3,
@@ -30,7 +32,7 @@ const Products = () => {
       description: "Consectetur adipiscing elit",
       image: "./images/im6.png",
       price: 12.5,
-      tocart: false
+      tocart: toCart
     },
     {
       id: 4,
@@ -38,7 +40,7 @@ const Products = () => {
       description: "Sed do eiusmod tempor incididunt",
       image: "./images/im5.png",
       price: 6.99,
-      tocart: false
+      tocart: toCart
     },
     {
       id: 5,
@@ -46,7 +48,7 @@ const Products = () => {
       description: "Ut labore et dolore magna aliqua",
       image: "./images/im4.png",
       price: 15.99,
-      tocart: false
+      tocart: toCart
     },
     {
       id: 6,
@@ -54,7 +56,7 @@ const Products = () => {
       description: "Ut enim ad minim veniam",
       image: "./images/im3.png",
       price: 10.99,
-      tocart: false
+      tocart: toCart
     },
     {
       id: 7,
@@ -70,12 +72,15 @@ const Products = () => {
       description: "Duis aute irure dolor in reprehenderit",
       image: "./images/im1.png",
       price: 14.5,
-      tocart: false
+      tocart: toCart
     }
 
   ]);
   const [cart, setCart] = useState([])
 const {setCartIndex} = useContext(CartContext)
+const {cartProducts, setCartProducts} = useContext(CartProductContext)
+
+
 let add =  (id) =>{
 
 let SearchProduct= productlist.find(product =>product.id === parseInt(id))
@@ -93,12 +98,16 @@ if(SearchCart === undefined){
     }]
   )
 }
-SearchProduct.tocart= true,
+
+setToCart(true)
 console.log(cart)
 localStorage.setItem('cart', JSON.stringify(cart))
-setCartIndex(cart.length)
+setCartProducts(cart)
+setCartIndex(cartProducts.length)
+
 //cartindex.innerHTML=cart.length
 }
+setCartIndex(cartProducts.length)
   return (
     <div className='Products'>
       {

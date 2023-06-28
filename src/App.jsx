@@ -3,15 +3,20 @@ import Home from './components/pages/Home'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import BuyPage from './components/pages/BuyPage';
 import CartProvider from './components/CartProvider';
+import CartAmountProvider from './components/CartAmountProvider';
+import CartProductProvider from './components/CartProductProvider';
+
+
 
 
 
 function App() {
 
 
-
   return (
     <div>
+      <CartProductProvider>
+      <CartAmountProvider>
       <CartProvider>
       <Router>
         <Routes>
@@ -25,13 +30,19 @@ function App() {
           <Route path='/cart'
             element={
               <>
+              <CartProductProvider>
+                <CartAmountProvider>
                 <BuyPage />
+                </CartAmountProvider>
+                </CartProductProvider>
               </>
             }
           />
         </Routes>
    </Router>
    </CartProvider>
+   </CartAmountProvider>
+   </CartProductProvider>
     </div>
   )
 }

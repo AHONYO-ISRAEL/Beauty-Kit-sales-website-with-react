@@ -8,10 +8,9 @@
   margin-left: 10%;
   display: flex;
   position: fixed;
-  background: white;
+  background: #262424;
   margin-bottom: 40px;
   z-index: 99;
-  margin-top: 70px;
   }
   
   .Cartbar button{

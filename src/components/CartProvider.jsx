@@ -1,8 +1,11 @@
-import { createContext, useState } from "react" 
+import { createContext, useContext, useState } from "react" 
 export  const CartContext = createContext() 
 import PropTypes from 'prop-types';
+import { CartProductContext } from "./CartProductProvider";
 const CartProvider = ({children}) => {
-    const [cartIndex, setCartIndex] = useState(0)
+  const {cartProducts} = useContext(CartProductContext)
+    const [cartIndex, setCartIndex] = useState(cartProducts.length)
+
   return (
     <CartContext.Provider  value={{cartIndex, setCartIndex}}>
         {children}

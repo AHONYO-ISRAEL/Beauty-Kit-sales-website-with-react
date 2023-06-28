@@ -1,11 +1,14 @@
 import CartProduct from '../cartproduct/CartProduct';
 import './CartProducts.css'
-import { useState } from 'react'
-const CartProducts = () => {
+import { useContext} from 'react'
+import PropTypes from 'prop-types';
+import { CartProductContext } from '../CartProductProvider';
 
-  let products =  JSON.parse(localStorage.getItem('cart')) || []
 
-const [cartproducts] = useState(products)
+const CartProducts = ({Updater}) => {
+
+  const  {cartProducts} = useContext(CartProductContext)
+
 
 
   return (
@@ -13,12 +16,17 @@ const [cartproducts] = useState(products)
   
     <div className='CartProducts'>
       {
-        cartproducts.map((x) =>
-        <CartProduct  cartproduct={x} key={x.id}  id={x.id} />
-        )
+        cartProducts.length>0?
+        cartProducts.map((x) =>
+        <CartProduct  cartproduct={x} key={x.id}  id={x.id} Updater={Updater}  />
+        ): <h1 className='noProducts'>No Products to display</h1>
       }
     </div>
   )
+}
+
+CartProducts.propTypes={
+  Updater: PropTypes.func,
 }
 
 
