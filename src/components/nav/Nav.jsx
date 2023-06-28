@@ -1,8 +1,11 @@
 
 
 const Nav = () => {
+  let cartindex = document.querySelector('.navbar ');
+  console.log( cartindex)
+
   return (
-    <nav className = "nav">
+    <nav className = "navbar">
     <div className = "iconsmedia cart-user">
       <a href="../index.html">      <img src="/fontawesome-free-6.4.0-web/svgs/solid/arrow-left.svg" className = "icon arrow" alt=""/>
       </a>

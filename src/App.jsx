@@ -11,7 +11,8 @@ import CartProductProvider from './components/CartProductProvider';
 
 
 function App() {
-
+let cartindex = document.querySelector('.navbar ');
+console.log( cartindex)
 
   return (
     <div>
@@ -30,11 +31,9 @@ function App() {
           <Route path='/cart'
             element={
               <>
-              <CartProductProvider>
-                <CartAmountProvider>
+
                 <BuyPage />
-                </CartAmountProvider>
-                </CartProductProvider>
+
               </>
             }
           />
