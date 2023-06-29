@@ -21,7 +21,7 @@ let clear =() =>{
     <div className='Cartbar'>
           <div className="total"><h1>Total : <span className="totalprice"> {cartAmount} $</span> </h1>
     </div>
-<div className="cartbuttons">
+<div className="cartbuttons">   
   <Button message={'Clear all'} onButtonClick={clear} classname={'allclear'} />
   <Button message={'Purchase'}  classname={'cartpurchase'} />
 
