@@ -24,7 +24,7 @@ setCartIndex(cartProducts.length)
   <h1>BEAUTIFLIE</h1>
 </div>
 <div className="icons cart-user">
-  <img src={user} className="icon" alt=""/>
+  <img src={user} className="icon user" alt=""/>
  <div className="cart">
   <a href={path}>
   <img src= {icon} className="icon icart"   alt=""  />
@@ -33,7 +33,7 @@ setCartIndex(cartProducts.length)
   <p className="cart-index1"> {cartIndex} </p>
 
  </div>
-<img  className="icon" alt="" src={glass} />
+<img  className="icon glass" alt="" src={glass} />
 </div>
 </div>
   )

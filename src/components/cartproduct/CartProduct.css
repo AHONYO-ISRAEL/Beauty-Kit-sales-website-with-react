@@ -11,6 +11,7 @@
    margin-top: 20vh;
    position: relative;
    min-width: 60%;
+   min-height: 70vh;
 }
 
 .product-head{
@@ -33,9 +34,7 @@ align-items: center;
 align-content: center;
 }
 
-.product-body img{
-width: 40%;
-}
+
 
 .quantity{
 display: flex;
