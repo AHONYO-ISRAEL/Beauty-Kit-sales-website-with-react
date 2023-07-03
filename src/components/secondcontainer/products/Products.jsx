@@ -83,7 +83,7 @@ const {cartProducts, setCartProducts} = useContext(CartProductContext)
 let add =  (id) =>{
 
 let SearchProduct= productlist.find(product =>product.id === parseInt(id))
-let SearchCart = cartProducts.find(product =>product.id === parseInt(id))
+let SearchCart = cartProducts?.find(product =>product.id === parseInt(id))
 if(SearchCart === undefined){
   setCartProducts( previouscartproducts =>
     [ ...previouscartproducts,
@@ -99,11 +99,11 @@ if(SearchCart === undefined){
 }
 
 localStorage.setItem('cart', JSON.stringify(cartProducts))
-setCartIndex(cartProducts.length)
+setCartIndex(cartProducts?.length)
 
 }
 localStorage.setItem('cart', JSON.stringify(cartProducts))
-setCartIndex(cartProducts.length)
+setCartIndex(cartProducts?.length)
 
   return (
     <div className='Products'>

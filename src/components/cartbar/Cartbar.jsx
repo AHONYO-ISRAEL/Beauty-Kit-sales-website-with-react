@@ -9,7 +9,7 @@ const Cartbar = () => {
 
 const {cartProducts, setCartProducts} =  useContext(CartProductContext)
 const {cartAmount, setCartAmount} = useContext(CartAmountContext)
-setCartAmount(cartProducts.map(product => product.price * product.quantity).reduce((accumulator, currentValue) => accumulator + currentValue, 0).toFixed(2))
+setCartAmount(cartProducts?.map(product => product.price * product.quantity).reduce((accumulator, currentValue) => accumulator + currentValue, 0).toFixed(2))
 
 let clear =() =>{
   alert('Clear all Product')

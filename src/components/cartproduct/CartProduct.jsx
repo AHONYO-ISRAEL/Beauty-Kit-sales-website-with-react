@@ -25,7 +25,7 @@ const CartProduct = ({ cartproduct, id }) => {
     setCartProducts(cart)
 
     console.log(cartProducts)
-    setCartAmount(cartProducts.map(product => product.price * product.quantity).reduce((accumulator, currentValue) => accumulator + currentValue, 0).toFixed(2))
+    setCartAmount(cartProducts?.map(product => product.price * product.quantity).reduce((accumulator, currentValue) => accumulator + currentValue, 0).toFixed(2))
 
   }
   let HandleMinusButtonClick = (e) => {
@@ -38,8 +38,7 @@ const CartProduct = ({ cartproduct, id }) => {
       localStorage.setItem('cart', JSON.stringify(cart))
       setCartProducts(cart)
   
-      console.log(cartProducts)
-      setCartAmount(cartProducts.map(product => product.price * product.quantity).reduce((accumulator, currentValue) => accumulator + currentValue, 0).toFixed(2))
+      setCartAmount(cartProducts?.map(product => product.price * product.quantity).reduce((accumulator, currentValue) => accumulator + currentValue, 0).toFixed(2))
       
   
     }
@@ -54,15 +53,15 @@ const CartProduct = ({ cartproduct, id }) => {
     cart = cart.filter((x) => x.id !== id)
     localStorage.setItem('cart', JSON.stringify(cart))
     setCartProducts(cart)
-    if(cartProducts.length >0){
-      setCartAmount(cartProducts.map(product => product.price * product.quantity).reduce((accumulator, currentValue) => accumulator + currentValue, 0))
+    if(cartProducts?.length >0){
+      setCartAmount(cartProducts?.map(product => product.price * product.quantity).reduce((accumulator, currentValue) => accumulator + currentValue, 0))
       }
       else{
       setCartAmount(0)
       }
-    setCartIndex(cartProducts.length)
+    setCartIndex(cartProducts?.length)
   }
-  setCartIndex(cartProducts.length)
+  setCartIndex(cartProducts?.length)
 
   return (
     <div className='CartProduct'>

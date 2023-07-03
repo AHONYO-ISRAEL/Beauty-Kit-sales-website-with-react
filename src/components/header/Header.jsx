@@ -11,7 +11,7 @@ import { CartProductContext } from '../CartProductProvider';
 const Header = ({release, icon, path}) => {
   const {cartIndex, setCartIndex} = useContext(CartContext)
 const {cartProducts} = useContext(CartProductContext)
-setCartIndex(cartProducts.length)
+setCartIndex(cartProducts?.length)
   return (
 
 

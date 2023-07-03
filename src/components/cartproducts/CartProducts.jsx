@@ -16,8 +16,8 @@ const CartProducts = ({Updater}) => {
   
     <div className='CartProducts'>
       {
-        cartProducts.length>0?
-        cartProducts.map((x) =>
+        cartProducts?.length>0?
+        cartProducts?.map((x) =>
         <CartProduct  cartproduct={x} key={x.id}  id={x.id} Updater={Updater}  />
         ): <h1 className='noProducts'>No Products to display</h1>
       }

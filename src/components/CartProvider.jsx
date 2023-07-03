@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { CartProductContext } from "./CartProductProvider";
 const CartProvider = ({children}) => {
   const {cartProducts} = useContext(CartProductContext)
-    const [cartIndex, setCartIndex] = useState(cartProducts.length)
+    const [cartIndex, setCartIndex] = useState(cartProducts?.length)
 
   return (
     <CartContext.Provider  value={{cartIndex, setCartIndex}}>
