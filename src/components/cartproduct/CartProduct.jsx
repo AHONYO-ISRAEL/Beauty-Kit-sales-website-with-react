@@ -62,6 +62,7 @@ const CartProduct = ({ cartproduct, id }) => {
       }
     setCartIndex(cartProducts.length)
   }
+  setCartIndex(cartProducts.length)
 
   return (
     <div className='CartProduct'>

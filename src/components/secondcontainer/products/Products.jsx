@@ -7,7 +7,7 @@ import { useContext, useState } from 'react'
 
 
 const Products = () => {
-  const [toCart, setToCart] = useState(false)
+  const [toCart] = useState(false)
   const  [productlist] = useState([
 
     {
@@ -76,7 +76,6 @@ const Products = () => {
     }
 
   ]);
-  const [cart, setCart] = useState([])
 const {setCartIndex} = useContext(CartContext)
 const {cartProducts, setCartProducts} = useContext(CartProductContext)
 
@@ -84,9 +83,9 @@ const {cartProducts, setCartProducts} = useContext(CartProductContext)
 let add =  (id) =>{
 
 let SearchProduct= productlist.find(product =>product.id === parseInt(id))
-let SearchCart = cart.find(product =>product.id === parseInt(id))
+let SearchCart = cartProducts.find(product =>product.id === parseInt(id))
 if(SearchCart === undefined){
-  setCart( previouscartproducts =>
+  setCartProducts( previouscartproducts =>
     [ ...previouscartproducts,
     {
       id:SearchProduct.id,
@@ -99,15 +98,13 @@ if(SearchCart === undefined){
   )
 }
 
-setToCart(true)
-console.log(cart)
-localStorage.setItem('cart', JSON.stringify(cart))
-setCartProducts(cart)
+localStorage.setItem('cart', JSON.stringify(cartProducts))
 setCartIndex(cartProducts.length)
 
-//cartindex.innerHTML=cart.length
 }
+localStorage.setItem('cart', JSON.stringify(cartProducts))
 setCartIndex(cartProducts.length)
+
   return (
     <div className='Products'>
       {

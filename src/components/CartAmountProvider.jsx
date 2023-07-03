@@ -9,7 +9,7 @@ const CartAmountProvider = ({children}) => {
 
 
 
-    const [cartAmount, setCartAmount] = useState(cartProducts.map(product => product.price * product.quantity)
+    const [cartAmount, setCartAmount] = useState(cartProducts?.map(product => product.price * product.quantity)
     .reduce((accumulator, currentValue) => accumulator + currentValue, 0).toFixed(2))
   return (
     <div>

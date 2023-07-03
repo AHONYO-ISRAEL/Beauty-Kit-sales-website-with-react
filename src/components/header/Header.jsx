@@ -12,7 +12,6 @@ const Header = ({release, icon, path}) => {
   const {cartIndex, setCartIndex} = useContext(CartContext)
 const {cartProducts} = useContext(CartProductContext)
 setCartIndex(cartProducts.length)
-
   return (
 
 

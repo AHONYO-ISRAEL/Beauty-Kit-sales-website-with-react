@@ -14,7 +14,7 @@ setCartAmount(cartProducts.map(product => product.price * product.quantity).redu
 let clear =() =>{
   alert('Clear all Product')
   setCartProducts([])
-  localStorage.setItem('cart', JSON.stringify(cartProducts))
+  localStorage.setItem('cart', JSON.stringify([]))
 }
 
   return (

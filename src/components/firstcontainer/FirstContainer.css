@@ -4,7 +4,7 @@
     display: flex;
     padding-left: 50px;
     background-attachment: fixed;
-    background-image: url(./../../../images/first-back.jpg);
+    background-image: url(/images/first-back.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
